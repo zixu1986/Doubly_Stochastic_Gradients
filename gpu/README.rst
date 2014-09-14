@@ -13,7 +13,14 @@ For details, please refer to the paper
 
 Compile
 ===================
-Please modified the path variables according to your own machine setup.
+Please modified the path variables in ``build.sh`` according to your own machine setup.
 
 This software also requires MAGMA, which can be found at
 http://icl.cs.utk.edu/magma/index.html.
+
+To compile, run ``./build.sh``
+
+Dataset
+===================
+Please download the MNIST 8M dataset and preprocess it according to the description in ``../matlab/README``
+
