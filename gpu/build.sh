@@ -27,7 +27,7 @@ export PYTHON_INCLUDE_PATH=/usr/local/packages/python/2.7.2/gcc-4.4.5/include/py
 # Numpy include directory. This should contain the file arrayobject.h, among others.
 export NUMPY_INCLUDE_PATH=/usr/local/packages/python/2.7.2/gcc-4.4.5/lib/python2.7/site-packages/numpy/core/include/numpy
 
-# To avoid a bug in CUDA
+# Intentionally set to blank to avoid a bug in CUDA
 export CPLUS_INCLUDE_PATH=
 
 # ATLAS library directory. This should contain the file libcblas.so, among others.
