@@ -12,4 +12,4 @@ the output files. It takes about an hour to transform the data.
 4. Modify the path variable train_datapath_pattern in preprocess_8m_data.m to
 the same as the variable output_pattern in transform_8m_dataset.m
 
-5. Run the script doubly_sgd_pcd_lr_8m.m. After about 100 iterations, the test error should reach about 0.66%.
+5. Run the script doubly_sgd_pcd_lr_8m.m. After about 100 iterations, the test error should reach about 0.73%.
