@@ -1,15 +1,17 @@
 % Preprocess data.
-test_datafile = 'mnistdata.mat';
 
 % This should be the same as your output path pattern in
 % transform_8m_dataset.m.
-train_datapath_pattern = '/nv/hcoc1/bxie33/data/mnist8m_dataset/mnist8m_%i.mat';
-if strcmp(train_datapath_pattern, '/nv/hcoc1/bxie33/data/mnist8m_dataset/mnist8m_%i.mat')
-    error('Modify train_datapath_pattern to point to Matlab file batches!');
-end
+train_datapath_pattern = '/nv/hcoc1/bxie33/data/mnist8m_dataset/data_batch_%i.mat';
+% if strcmp(train_datapath_pattern, '/nv/hcoc1/bxie33/data/mnist8m_dataset/data_batch_%i.mat')
+%     error('Modify train_datapath_pattern to point to Matlab file batches!');
+% end
 
+test_datapath = sprintf(train_datapath_pattern, 82);
 if ~exist('testlabel', 'var') || ~exist('testdata', 'var')
-    load(test_datafile, 'testlabel', 'testdata');
+    load(test_datapath);
+    testdata = data;
+    testlabel = label;
 end
 
 n_lines = 8100000;
@@ -27,8 +29,8 @@ if load_all
         input_file = sprintf(train_datapath_pattern, i);
         tmp_f = load(input_file);
         d_idx = (i-1)*batch_size+1:i*batch_size;
-        traindata(:, d_idx) = tmp_f.traindata;
-        trainlabel(d_idx) = tmp_f.trainlabel;
+        traindata(:, d_idx) = tmp_f.data;
+        trainlabel(d_idx) = tmp_f.label;
     end
 end
 
