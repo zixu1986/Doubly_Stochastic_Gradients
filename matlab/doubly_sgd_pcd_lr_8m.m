@@ -24,7 +24,7 @@ blocksz = 4096
 batch_size = 32768
 blockno = fix(n / blocksz);
 % Random seed offset.
-r = 5
+r = 1
 
 iters = blockno / 2;
 
