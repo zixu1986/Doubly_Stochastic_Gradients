@@ -3,9 +3,9 @@
 % This should be the same as your output path pattern in
 % transform_8m_dataset.m.
 train_datapath_pattern = '/nv/hcoc1/bxie33/data/mnist8m_dataset/data_batch_%i.mat';
-% if strcmp(train_datapath_pattern, '/nv/hcoc1/bxie33/data/mnist8m_dataset/data_batch_%i.mat')
-%     error('Modify train_datapath_pattern to point to Matlab file batches!');
-% end
+if strcmp(train_datapath_pattern, '/nv/hcoc1/bxie33/data/mnist8m_dataset/data_batch_%i.mat')
+    error('Modify train_datapath_pattern to point to Matlab file batches!');
+end
 
 test_datapath = sprintf(train_datapath_pattern, 82);
 if ~exist('testlabel', 'var') || ~exist('testdata', 'var')
