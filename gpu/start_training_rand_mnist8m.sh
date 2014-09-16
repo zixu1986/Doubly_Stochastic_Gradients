@@ -1,6 +1,6 @@
 #!/bin/bash
 
-data_path="/nv/hcoc1/bxie33/data/mnist/mnist8m"
+data_path="/nv/hcoc1/bxie33/data/mnist8m_dataset"
 save_path="/nv/hcoc1/bxie33/scratch/mnist8m/rand_caches"
 test_range="82"
 train_range="1-81"
@@ -8,7 +8,7 @@ layer_def="./example-layers/layers-rand-mnist8m.cfg"
 layer_params="./example-layers/layer-params-rand-mnist8m.cfg"
 data_provider="mnist"
 test_freq="1"
-gpu="3"
+gpu="0"
 mini="512"
 epochs="5"
 

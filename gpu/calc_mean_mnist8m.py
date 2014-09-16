@@ -23,6 +23,7 @@ img_mean.reshape(784, 1)
 dic = {}
 dic['num_vis'] = 784
 dic['data_mean'] = img_mean
+dic['label_names'] = range(10)
 
 f = open(output_file, 'wb')
 pickle.dump(dic, f, -1)
