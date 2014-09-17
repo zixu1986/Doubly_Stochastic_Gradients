@@ -10,7 +10,7 @@ data_provider="mnist"
 test_freq="1"
 gpu="0"
 mini="512"
-epochs="5"
+epochs="1"
 
 python convnet.py \
   --data-path=$data_path \
