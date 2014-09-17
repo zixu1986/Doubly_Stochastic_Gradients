@@ -266,9 +266,9 @@ class MNIST8MDataProvider(LabeledDataProvider):
   def get_batch(self, batch_num):
     old_dic = loadmat(self.get_data_file_name(batch_num))
     dic = {}
-    dic['data'] = n.require(old_dic['traindata'], dtype=n.single,
+    dic['data'] = n.require(old_dic['data'], dtype=n.single,
                             requirements='C')
-    dic['labels'] = old_dic['trainlabel'].T
+    dic['labels'] = old_dic['label'].T
     return dic
 
   def get_next_batch(self):
