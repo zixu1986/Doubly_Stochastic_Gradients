@@ -29,4 +29,4 @@ Please modify the paths inside ``calc_mean_mnist8m.py``.
 
 A script ``start_training_rand_mnist8m.sh`` is provided to start the experiement. Please modify the paths accordingly.
 
-After about 40 batches, the test error reaches about 0.50%.
+After about 40 batches, the test error reaches about 0.54%.
