@@ -1,6 +1,8 @@
 #!/bin/bash
 
+# Modify the following path to the data
 data_path="/nv/hcoc1/bxie33/data/mnist8m_dataset"
+# Modify the path for output directory
 save_path="/nv/hcoc1/bxie33/scratch/mnist8m/rand_caches"
 test_range="82"
 train_range="1-81"

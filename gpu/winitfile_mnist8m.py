@@ -2,7 +2,7 @@ import numpy as n
 from gpumodel import *
 from scipy.io import loadmat
 
-checkpoint_file = '/nv/hcoc1/bxie33/scratch/mnist8m/rand_caches/mnist8m_conv'
+checkpoint_file = 'pretrained_models/mnist8m'
 layers_ = IGPUModel.load_checkpoint(checkpoint_file)['model_state']['layers']
 layers = {}
 for l in layers_:
