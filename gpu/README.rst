@@ -20,7 +20,7 @@ http://icl.cs.utk.edu/magma/index.html.
 
 To compile, run ``./build.sh``
 
-Dataset
+MNIST 8m Dataset
 ===================
 Please download the MNIST 8M dataset and preprocess it according to the description in ``../matlab/README``
 
@@ -30,3 +30,10 @@ Please modify the paths inside ``calc_mean_mnist8m.py``.
 A script ``start_training_rand_mnist8m.sh`` is provided to start the experiement. Please modify the paths accordingly.
 
 After about 40 batches, the test error reaches about 0.54%.
+
+
+CIFAR10 Dataset
+===================
+This dataset is provided in the directory ``datasets``
+
+Modify the paths inside the script accordingly. Then run the script ``start_training_rand_cifar10.sh`` to start the experiment.
