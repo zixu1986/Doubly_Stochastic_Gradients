@@ -10,7 +10,6 @@ layer_def="./example-layers/layers-rand-mnist8m.cfg"
 layer_params="./example-layers/layer-params-rand-mnist8m.cfg"
 data_provider="mnist"
 test_freq="1"
-gpu="0"
 mini="512"
 epochs="1"
 
@@ -22,7 +21,6 @@ python convnet.py \
   --layer-params=$layer_params \
   --data-provider=$data_provider \
   --test-freq=$test_freq \
-  --gpu=$gpu \
   --mini=$mini \
   --epochs=$epochs \
   --run-id=0
