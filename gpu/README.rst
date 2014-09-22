@@ -36,4 +36,4 @@ CIFAR10 Dataset
 ===================
 This dataset is provided in the directory ``datasets``
 
-Modify the paths inside the script accordingly. Then run the script ``start_training_rand_cifar10.sh`` to start the experiment.
+Modify the paths inside the script ``start_training_rand_cifar10.sh`` accordingly. Then run the script to start the experiment.
