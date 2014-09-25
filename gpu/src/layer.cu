@@ -685,6 +685,10 @@ void RandFeatLayer::gen_rand_features_fastfood(const NVMatrix& input, NVMatrix* 
     int log2_orig_feat_size = int(ceil(log(double(orig_feat)) / log(2)));
     int expected_size = 1 << log2_orig_feat_size;
     int n_parts = rand_dim / expected_size;
+    if (n_parts < 1) {
+      cout << "Error! Input dimension is too large for fastfood!" << endl;
+      exit(1);
+    }
     
     // Initialize random variables
     if (seed >= _binary_list.size()) {
