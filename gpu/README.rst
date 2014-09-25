@@ -40,3 +40,12 @@ Modify the paths inside the script ``start_training_rand_cifar10.sh`` accordingl
 After it finishes, the single-view test error is about 15%. Multiview testing produces the test error around 11%. To do multiview testing,
 type in the command ``python convnet -f [the path to the saved model] --test-only=1 --multiview-test=1 --logreg-name=logprob``.
 For more details, please refer to step 6 in the `methodology <http://code.google.com/p/cuda-convnet/wiki/Methodology>`_ section of cuda-convnet.
+
+Imagenet Dataset
+===================
+Imagenet Data can be downloaded from http://www.image-net.org/download-images.
+
+The images must be reshaped to 256 x 256 with 3 channels, and then randomly shuffled into data batches. 
+The data format is similar to that in CIFAR10. Also, a batches.meta file with image mean should be included.
+
+Once the data are set up, modifidy the paths in ``start_training_rand_cropped_imagenet.sh`` and run it.
