@@ -63,6 +63,12 @@ for j = 1:iters
     step_size = step_size0 / (1 + step_size1 * j);
     updateW = - step_size * (residue * train_batch_X' / batch_size + reg_param * W(:, w_idx)) / preconditioner;
     W(:, w_idx) = W(:, w_idx) + updateW;
+    if (reg_param > 1e-6)
+        for inner_j = 0:f_idx-1
+            inner_w_idx = inner_j*2*blocksz+1:(inner_j+1)*2*blocksz;
+            W(:, inner_w_idx) = (1 - reg_param) * W(:, inner_w_idx);
+        end
+    end
 
     train_preds_batch = train_batch_preds + updateW * train_batch_X;
 
