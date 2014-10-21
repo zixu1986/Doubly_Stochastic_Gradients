@@ -66,7 +66,7 @@ for j = 1:iters
     if (reg_param > 1e-6)
         for inner_j = 0:f_idx-1
             inner_w_idx = inner_j*2*blocksz+1:(inner_j+1)*2*blocksz;
-            W(:, inner_w_idx) = (1 - reg_param) * W(:, inner_w_idx);
+            W(:, inner_w_idx) = (1 - step_size * reg_param) * W(:, inner_w_idx);
         end
     end
 
